@@ -2,7 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int num1 = 120, num2 = 170, result;
+        int num1 = Integer.MAX_VALUE;
+        int num2 = 170;
+        int result;
 
         result = num1 + num2;
         System.out.println("num1 + num2 = " + result);
@@ -37,10 +39,10 @@ public class Main {
         }
 
         result = num2 / num1;
-        System.out.println("num1 / num 2 = " + result);
+        System.out.println("num2 / num1 = " + result);
 
         result = num2 % num1;
-        System.out.println("num1 % num 2 = " + result);
+        System.out.println("num2 % num1 = " + result);
 
         boolean num3 = num2 > num1;
         System.out.println(num3);
@@ -55,6 +57,15 @@ public class Main {
         System.out.println(num6);
 
         boolean num7 = num1 < num2 && num1 != 0;
-        System.out.println(num7);}
+        System.out.println(num7);
 
+        double doubleResult = (double) num1 / num2;
+        System.out.println("num1 / num2 (double) = " + doubleResult);
+
+        doubleResult = num1 + (double) num2;
+        System.out.println("num1 + num2 (double) = " + doubleResult);
+
+        doubleResult = num1 * (double) num2;
+        System.out.println("num1 * num2 (double) = " + doubleResult);
     }
+}
